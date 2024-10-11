@@ -92,9 +92,9 @@ const Footer = () => {
         
         <div className="box2">
             <h3>LINKS</h3>
-          <Link to="/about-us"><li>About</li></Link>
-          <Link to="/smiles"> <li>Souls</li></Link>
-          <Link to="/contact-us"><li>Contact</li></Link>
+          <Link to="/about"><li>About</li></Link>
+          <Link to="/soul"> <li>Souls</li></Link>
+          <Link to="/contact"><li>Contact</li></Link>
           <Link to="/profile"><li>Your Profile</li></Link>
         </div>
 
@@ -103,7 +103,7 @@ const Footer = () => {
             <h3>OFFICIAL</h3>
             <Link to="/privacy-policy"><li>Privacy Policy</li></Link>
             <Link to="/terms-conditions"><li>Terms & Conditions</li></Link>
-            <Link to="/shipping-returns"> <li>Shipping & Returns</li></Link>
+            <Link to="/return-claim"> <li>Shipping & Returns</li></Link>
         </div>
         <div className="box4">
             <h3>HELP</h3>
