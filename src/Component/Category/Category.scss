@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import "../MediaQuery/Mixin.scss";
+.title1 {
+  h1 {
+    color: teal;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 15px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: maroon;
+    text-align: center;
+    font-family: "Merienda", cursive;
+    font-size: 3rem; /* Set font size */
+    animation: colorLoop 5s infinite; /* Applying color loop animation */
+    transition: all 0.3s ease;
+
+    /* Adding a subtle text shadow for depth */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    /* Keyframes for color looping */
+    @keyframes colorLoop {
+      0% {
+        color: #800000; /* Maroon */
+        text-decoration-color: #e57fff; /* Light Cyan */
+      }
+      25% {
+        color: #003366; /* Dark Blue */
+        text-decoration-color: #ff8b89; /* Light Red */
+      }
+      50% {
+        color: #008080; /* Teal */
+        text-decoration-color: #ffcf7b; /* Light Goldenrod Yellow */
+      }
+      75% {
+        color: #5C3A3A; /* Dark Brown */
+        text-decoration-color: #ff8282; /* White Smoke */
+      }
+      100% {
+        color: #2F4F4F; /* Dark Slate Gray */
+        text-decoration-color: #FFD700; /* Gold */
+      }
+    }
+    
+    
+    
+  }
+}
+
+.category-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  font-family: "Overlock SC", sans-serif;
+width: 100%;
+height: max-content;
+
+.category {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+
+  .container {
+    width: 300px;
+    height: 350px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 2px solid #034070;
+
+    @include mobile_S {
+      width: 250px;
+      height: 300px;
+    }
+
+    @include mobile_M {
+      width: 270px;
+      height: 300px;
+    }
+
+    @include mobile_L {
+      width: 300px;
+      height: 350px;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+      transform: rotate(0deg) scale(1); /* Rotate to 0 degrees and reset scale */
+    }
+
+    img {
+      transition: transform 0.8s ease;
+      width: 300px;
+      height: 350px;
+
+      @include mobile_S {
+        width: 250px;
+        height: 300px;
+      }
+
+      @include mobile_M {
+        width: 270px;
+        height: 300px;
+      }
+
+      @include mobile_L {
+        width: 300px;
+        height: 350px;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(3, 104, 65, 0.6), rgba(255, 1, 22, 0.6));
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: rotate(-15deg) scale(1.3); /* Start with a slight rotation and larger scale */
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Smooth rotation and opacity change */
+
+    h2 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      font-size: 40px;
+      text-align: center;
+      color: gold;
+      font-family: "Merienda", cursive;
+
+    }
+
+    span {
+
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -75%);
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+      color: #fff97e;
+      font-family: "Merienda", cursive;
+    }
+  }
+}
+
+}

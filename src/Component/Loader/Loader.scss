@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+.loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+    h1{
+        color: #034070;
+        font-family: "Merienda", cursive;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+
+}

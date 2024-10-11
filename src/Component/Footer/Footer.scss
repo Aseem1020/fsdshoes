@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+.footer-main{
+    background-color: #FFFBF3;
+    display: flex;
+    height: max-content;
+    justify-content:space-evenly;
+    align-items:flex-start;
+    padding: 10px ;
+    border-top: 2px solid #034070;
+    flex-flow: wrap;
+
+    li{
+        list-style: none;
+        color: maroon;
+        font-family: "Mooli", sans-serif; 
+
+    }
+
+    a{
+        text-decoration: none;
+        color: maroon;
+        font-family: "Mooli", sans-serif; 
+
+    }
+.box1{
+    text-align: center;
+    font-size: 15px;
+    h3{
+        color: #034070;
+        font-family: "Merienda", cursive;
+        
+    }
+    h4{
+    color: maroon;
+    font-family: "Mooli", sans-serif; 
+
+    }
+    .form1{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    Button {
+        background-color: floralwhite;
+        font-family: "Mooli", sans-serif; 
+        color: #034070; /* Initial text color */
+        position: relative;
+        overflow: hidden; /* Ensure no overflow issues */
+        border: none; /* Remove any default border */
+        padding: 8px 20px; /* Add padding for better appearance */
+        cursor: pointer; /* Add pointer cursor for button */
+        text-align: center; /* Center align text */
+        z-index: 1; /* Ensure button text is on top */
+    
+        /* Add a diagonal background transition */
+        &::before {
+            content: ''; 
+            position: absolute;
+            top: -100%; 
+            left: -100%; 
+            width: 300%; 
+            height: 300%; 
+            background-color: #034070; /* Background color */
+            color: floralwhite; /* Text color */
+            display: flex; /* Use flexbox for centering */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            transform: translateX(-100%) translateY(-100%); 
+            transition: transform 0.5s ease; 
+            z-index: 0; /* Ensure the pseudo-element is behind the button text */
+            font-size: 16px; /* Adjust font size as needed */
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+        
+        &:hover::before {
+            transform: translateX(0) translateY(0); /* Slide in from the top-left corner on hover */
+        }
+    
+        /* Ensure the button text is visible above the pseudo-element */
+        span {
+            position: relative;
+            z-index: 1; /* Ensure text is above the pseudo-element */
+            transition: color 0.5s ease; /* Smooth color transition */
+        }
+    
+        &:hover span {
+            color: floralwhite; /* Change text color on hover */
+        }
+    }
+    }
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    
+   
+
+}
+
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: justify;
+    font-size: 15px;
+    h3{
+        color: #034070;
+        font-family: "Merienda", cursive;
+        
+    }
+    li{
+        cursor: pointer;
+        color: maroon;
+        transition: transform 0.4s ease;
+        
+        &:hover{
+            color: teal;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.box3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: justify;
+    font-size: 15px;
+    h3{
+        color: #034070;
+        font-family: "Merienda", cursive;
+    }
+    li{
+        cursor: pointer;
+        color: maroon;
+        transition: transform 0.4s ease;
+        
+        &:hover{
+            color: teal;
+            transform: scale(1.1);
+        }
+    }
+}
+.box4{
+   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    h3{
+        text-align: center;
+        color: #034070;
+        font-family: "Merienda", cursive;
+    }
+    p{
+        color: maroon;
+        font-family: "Mooli", sans-serif; 
+
+    }
+    li{
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    b{
+        cursor: pointer;
+        color:purple;
+        font-family: "Mooli", sans-serif; 
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+}
