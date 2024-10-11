@@ -1,0 +1,497 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+$ig-floralwhite: floralwhite !default;
+$ig-blue: #034070 !default;
+$ig-maroon: maroon !default;
+$ig-shadow: 0 0.3px 0.3px lighten($ig-maroon, 50%);
+@import "../MediaQuery/Mixin.scss";
+
+.single-product-page {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: flex-start;
+    margin-top: 30px;
+    padding: 20px;
+    font-family: "Mooli", sans-serif; 
+    font-weight: 500;
+    
+    @include mobile_S{
+      flex-direction: column;
+      align-items: center;
+    }
+    @include tablet{
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .product-image {
+      width: 350px;
+      height: 350px;
+     
+      @include mobile_S{
+        width: 250px;
+      height: 250px;
+      }
+
+      @include mobile_M{
+        width: 300px;
+      height: 300px;
+      }
+
+      @include mobile_L{
+        width: 320px;
+      height: 320px;
+      }
+      @include tablet_L{
+        width: 350px;
+      height: 350px;
+      }
+      .image-gallery-icon {
+     
+        filter: drop-shadow($ig-shadow);
+      
+        
+      }
+      .image-gallery-fullscreen-button,
+      .image-gallery-play-button {
+        bottom: 0;
+        padding: 10px;
+        color: $ig-blue;
+        
+        &:hover{
+          color: $ig-maroon;
+        }
+      
+        .image-gallery-svg {
+          height: 20px;
+          width: 20px;
+        }
+      
+        @media (max-width: $ig-small-screen) {
+          padding: 8px;
+      
+          .image-gallery-svg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      
+        @media (max-width: $ig-xsmall-screen) {
+          padding: 5px;
+      
+          .image-gallery-svg {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  padding: 50px 0px;
+  top: 50%;
+  transform: translateY(-50%,0);
+ 
+  
+
+  .image-gallery-svg {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: $ig-blue ;
+    color: $ig-floralwhite;
+    
+   
+    &:hover{
+      color: $ig-floralwhite;
+      background-color: $ig-maroon;
+    }
+  }
+
+  @media (max-width: $ig-small-screen) {
+    .image-gallery-svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  @media (max-width: $ig-xsmall-screen) {
+    .image-gallery-svg {
+      height: 40px;
+      width: 20px;
+    }
+  }
+
+  &[disabled] {
+    cursor: disabled;
+    opacity: .6;
+    pointer-events: none;
+  }
+}
+
+.image-gallery-thumbnail {
+  display: inline-flex;
+  border: 4px solid transparent;
+  transition: border .3s ease-out;
+  width: 80px;
+
+  background: transparent;
+  padding: 0;
+
+  @media (max-width: $ig-small-screen) {
+    border: 3px solid transparent;
+    width: 60px;
+   
+  }
+
+  + .image-gallery-thumbnail {
+    margin-left: 7px;
+  }
+
+  .image-gallery-thumbnail-inner {
+    display: block;
+    position: relative;
+  }
+
+  .image-gallery-thumbnail-image {
+    vertical-align: middle;
+    width: 100%;
+    line-height: 0;
+  }
+
+  &.active,
+  &:focus {
+    outline: none;
+    border: 4px solid $ig-blue;
+
+    @media (max-width: $ig-small-screen) {
+      border: 3px solid $ig-blue;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      outline: none;
+      border: 4px solid $ig-maroon;
+
+      @media (max-width: $ig-small-screen) {
+        border: 3px solid $ig-maroon;
+      }
+    }
+  }
+
+}
+    }
+
+    .box {
+     text-align: center;
+     
+
+  h2 {
+    font-size: 22px;
+    color:navy;
+   
+  }
+  h4{
+    font-size: 20px;
+  } 
+  h5{
+    display: flex;
+    gap: 5px;
+    font-size: 17px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  span {
+    font-size: 16px;
+    color: maroon;
+    
+    
+  }
+  h6{
+    color: darkblue;
+  }
+
+  .size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    span{
+      background-color: lightgoldenrodyellow;
+      border-radius: 50%;
+      border: 1px solid #d60303;
+      padding: 10px 15px;
+      cursor: pointer;
+      color: #d60303;
+      transition: all 0.7s ease;
+
+      &:hover{
+        color: lightgoldenrodyellow;
+        background-color: #d60303;      
+      }
+    }
+  }
+  
+.wish{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 30px;
+
+  Button {
+    background-color: floralwhite;
+    font-family: "Mooli", sans-serif;
+    color: #034070; /* Initial text color */
+    position: relative;
+    overflow: hidden; /* Ensure no overflow issues */
+    border: none; /* Remove any default border */
+    padding: 8px 20px; /* Add padding for better appearance */
+    cursor: pointer; /* Add pointer cursor for button */
+    text-align: center; /* Center align text */
+    z-index: 1; /* Ensure button text is on top */
+
+    /* Add a diagonal background transition */
+    &::before {
+        content: ''; 
+        position: absolute;
+        top: -100%; 
+        left: -100%; 
+        width: 300%; 
+        height: 300%; 
+        background-color: #034070; /* Background color */
+        color: floralwhite; /* Text color */
+        display: flex; /* Use flexbox for centering */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        transform: translateX(-100%) translateY(-100%); 
+        transition: transform 0.5s ease; 
+        z-index: 0; /* Ensure the pseudo-element is behind the button text */
+        font-size: 16px; /* Adjust font size as needed */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+    
+    &:hover::before {
+        transform: translateX(0) translateY(0); /* Slide in from the top-left corner on hover */
+    }
+
+    /* Ensure the button text is visible above the pseudo-element */
+    span {
+        position: relative;
+        z-index: 1; /* Ensure text is above the pseudo-element */
+        transition: color 0.5s ease; /* Smooth color transition */
+    }
+
+    &:hover span {
+        color: floralwhite; /* Change text color on hover */
+    }
+}
+}
+ 
+
+.accordion {
+  border-top: 1px solid #000000;
+  border-bottom:1px solid #000000 ;
+  width: 400px;
+  height: max-content;
+  margin: auto;
+  
+  @include mobile_S{
+    width: 260px;
+  }
+  @include mobile_M{
+    width: 300px;
+  }
+  @include mobile_L{
+    width: 350px;
+  }
+  @include tablet_L{
+    width: 400px;
+  }
+  &.open .accordion-header .arrow-icon {
+    transform: rotate(180deg);
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    align-items: center;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: white;
+    color: purple;
+
+    .arrow-icon {
+      transition: transform 0.5s ease;
+    }
+  }
+
+  .accordion-content {
+    padding: 10px 10px;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 25px;
+
+  }
+}
+
+.accordion1 {
+  border-top: 1px solid #000000;
+  border-bottom:1px solid #000000 ;
+  width: 400px;
+  height: max-content;
+  margin: auto;
+ 
+  @include mobile_S{
+    width: 260px;
+  }
+  @include mobile_M{
+    width: 300px;
+  }
+  @include mobile_L{
+    width: 350px;
+  }
+  @include tablet_L{
+    width: 400px;
+  }
+  &.open .accordion-header1 .arrow-icon1 {
+    transform: rotate(180deg);
+  }
+
+  .accordion-header1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    align-items: center;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: white;
+    color: purple;
+
+    .arrow-icon1 {
+      transition: transform 0.5s ease;
+    }
+  }
+
+  .accordion-content1 {
+    text-align: justify;
+    font-size: 16px;
+    padding: 10px 10px;
+    line-height: 25px;
+
+  }
+}
+
+.accordion2 {
+  border-top: 1px solid #000000;
+  border-bottom:1px solid #000000 ;
+  width: 400px;
+  height: max-content;
+  margin: auto;
+  @include mobile_S{
+    width: 260px;
+  }
+  @include mobile_M{
+    width: 300px;
+  }
+  @include mobile_L{
+    width: 350px;
+  }
+  @include tablet_L{
+    width: 400px;
+  }
+  &.open .accordion-header2 .arrow-icon2 {
+    transform: rotate(180deg);
+  }
+
+  .accordion-header2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    align-items: center;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: white;
+    color: purple;
+
+    .arrow-icon2 {
+      transition: transform 0.5s ease;
+    }
+  }
+
+  .accordion-content2 {
+    text-align: justify;
+    font-size: 16px;
+    padding: 10px 10px;
+    line-height: 25px;
+
+  }
+}
+
+.social-media{
+  display: flex;
+  gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+
+    h3{
+      color: #034070;
+    }
+
+  .icons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    #ic{
+      transition: transform 0.5s ease;
+      font-size: 20px;
+      &:hover{
+        transform: scale(1.2);
+        color: #fa2bbc;
+      }
+    }
+
+    #ic2{
+      transition: transform 0.5s ease;
+      font-size: 20px;
+      &:hover{
+        transform: scale(1.2);
+        color: #008d0a;
+      }
+    }
+
+    #ic3{
+      transition: transform 0.5s ease;
+      font-size: 20px;
+      &:hover{
+        transform: scale(1.2);
+        color: #d60303;
+      }
+    }
+
+    #ic4{
+      transition: transform 0.5s ease;
+      font-size: 20px;
+      &:hover{
+        transform: scale(1.2);
+        color: #02aafe;
+      }
+    }
+
+
+  }
+}
+
+
+    }
+
+
+  }
