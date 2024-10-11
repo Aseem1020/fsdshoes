@@ -1,0 +1,29 @@
+@import "../../MediaQuery/Mixin.scss";
+.privacy{
+ background:linear-gradient(150deg,floralwhite,lightblue, floralwhite);
+    padding: 20px;
+    .wavy-heading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      
+      .wavy-heading {
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-underline-offset: 15px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: maroon;
+        text-align: center;
+        font-family: "Merienda", cursive;
+        color: #034070;
+      }
+p{
+    color: black;
+        text-align: center;
+        padding:  20px;
+        font-family: "Mooli", sans-serif; 
+        line-height: 25px;
+}
+}

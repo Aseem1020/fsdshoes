@@ -1,0 +1,119 @@
+@import "../../MediaQuery/Mixin.scss";
+
+.order-container {
+  padding: 20px;
+  background:linear-gradient(150deg,floralwhite,lightblue, floralwhite);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .wavy-heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .wavy-heading {
+  
+   
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 15px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: maroon;
+    text-align: center;
+    font-family: "Merienda", cursive;
+  }
+  .order-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 
+    rgba(1, 34, 134, 0.347) ;
+    background-color: #fff; // Added background color for better contrast
+    transition: box-shadow 0.3s ease; // Smooth transition for hover effect
+    font-family: "Mooli", sans-serif; 
+
+    @include mobile_S{
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+    }
+    @include mobile_M{
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+    @include mobile_L{
+      width: 500px;
+      display: flex;
+      flex-direction: row;
+    }
+    @include tablet{
+      width: 600px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(87, 3, 0, 0.347); // Enhanced shadow on hover
+    }
+
+    .order-item-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-right: 1px solid #ddd;
+    }
+
+    .order-item-details {
+      padding: 15px;
+      flex: 1;
+      text-align: center;
+      font-family: "Mooli", sans-serif; 
+
+      p {
+        margin: 0;
+        font-size: 0.875rem;
+        color: #333; // Improved color contrast
+      }
+
+      h3 {
+        margin: 5px 0;
+        font-size: 1.25rem;
+        color: #800026;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.125rem;
+    color: #666;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-item {
+    flex-direction: column;
+
+    .order-item-img {
+      width: 100%;
+      height: auto;
+      border-right: none;
+    }
+
+    .order-item-details {
+      padding: 10px;
+    }
+  }
+}

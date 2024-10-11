@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+@import "../../MediaQuery/Mixin.scss";
+.cart-main{
+    
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    h2{
+        color:#034070 ;
+        font-family: "Merienda", cursive;
+    }
+    .cart-item{
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        align-items: center;
+        transition: all 0.4s;
+        padding: 5px 0 10px 0px;
+        position: relative;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.046);
+        }
+
+    img{
+        height: 70px;
+        width: 70px;
+    }
+
+    .cart-details{
+        display: flex;
+        flex-direction: column;
+       
+            h3{
+            font-size: 15px;
+            color:maroon;
+            font-family: "Mooli", sans-serif; 
+            }
+            .full{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                background-color: #ffffff;
+                border: 1.5px solid maroon;
+                outline: none;
+                border-radius: 10px;
+                width: max-content;
+            
+                button{
+                  display: flex;
+                  justify-content: center;
+                align-items: center;
+                padding: 5px;
+                border: none;
+                width: max-content;
+                 outline: none;
+                 color: maroon;
+                 background-color: #ffffff;
+                 cursor: pointer;
+                }
+            
+                .count{
+                  font-size: 20px;
+                  color: #034070;
+                }
+              }
+        .close{
+            position: absolute;
+            top: 1px;
+            right: 10px;
+            font-size: 20px;
+            font-family: "Mooli", sans-serif; 
+            color: rgba(0, 0, 0, 0.409);
+            transition: all 0.2s;
+            cursor: pointer;
+
+            &:hover{
+                color: black;
+                transform:scale(1.1) ;
+            }
+        }
+
+    }
+}
+
+.cart-item1{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    transition: all 0.4s;
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.046);
+    }
+
+img{
+    height: 70px;
+    width: 70px;
+}
+
+.cart-details1{
+    display: flex;
+    flex-direction: column;
+   
+        h3{
+        font-size: 15px;
+        color:#034070;
+        font-family: "Mooli", sans-serif; 
+        }
+        .full1{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #ffffff;
+            border: 1.5px solid maroon;
+            outline: none;
+            border-radius: 10px;
+            width: max-content;
+        
+            button{
+              display: flex;
+              justify-content: center;
+            align-items: center;
+            padding: 5px;
+            border: none;
+             outline: none;
+             color: maroon;
+             background-color: #ffffff;
+             
+             cursor: pointer;
+            }
+        
+            .count1{
+              font-size: 20px;
+              color:#034070;
+            }
+          }
+    .close{
+        position: absolute;
+        top: 1px;
+        right: 10px;
+        font-size: 20px;
+        font-family: "Mooli", sans-serif; 
+        color: rgba(0, 0, 0, 0.409);
+        transition: all 0.2s;
+        cursor: pointer;
+
+        &:hover{
+            color: black;
+            transform:scale(1.1) ;
+        }
+    }
+
+}
+}
+.cart-total{
+    font-family: "Mooli", sans-serif; 
+      
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.594);
+
+    .value{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 19px;
+        font-weight: 900;
+
+    }
+
+    .check{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        padding: 10px;
+       
+        Button {
+            background-color: floralwhite;
+            font-family: "Mooli", sans-serif;
+            color: #034070; /* Initial text color */
+            position: relative;
+            overflow: hidden; /* Ensure no overflow issues */
+            border: none; /* Remove any default border */
+            padding: 8px 20px; /* Add padding for better appearance */
+            cursor: pointer; /* Add pointer cursor for button */
+            text-align: center; /* Center align text */
+            z-index: 1; /* Ensure button text is on top */
+        
+            /* Add a diagonal background transition */
+            &::before {
+                content: ''; 
+                position: absolute;
+                top: -100%; 
+                left: -100%; 
+                width: 300%; 
+                height: 300%; 
+                background-color: #034070; /* Background color */
+                color: floralwhite; /* Text color */
+                display: flex; /* Use flexbox for centering */
+                align-items: center; /* Center vertically */
+                justify-content: center; /* Center horizontally */
+                transform: translateX(-100%) translateY(-100%); 
+                transition: transform 0.5s ease; 
+                z-index: 0; /* Ensure the pseudo-element is behind the button text */
+                font-size: 16px; /* Adjust font size as needed */
+                white-space: nowrap; /* Prevent text from wrapping */
+            }
+            
+            &:hover::before {
+                transform: translateX(0) translateY(0); /* Slide in from the top-left corner on hover */
+            }
+        
+            /* Ensure the button text is visible above the pseudo-element */
+            span {
+                position: relative;
+                z-index: 1; /* Ensure text is above the pseudo-element */
+                transition: color 0.5s ease; /* Smooth color transition */
+            }
+        
+            &:hover span {
+                color: floralwhite; /* Change text color on hover */
+            }
+        }
+      }
+}
+
+
+}

@@ -1,0 +1,194 @@
+
+@import "../../../MediaQuery/Mixin.scss";
+.user-main{
+    width: 100%;
+    height: 700px;
+    padding: 20px 0px;
+    background:linear-gradient(150deg,floralwhite,lightblue, floralwhite);
+    font-family: "Mooli", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    hr{
+        height: 350px;
+        width: 5px;
+        background-color: #034070;
+
+        @include mobile_S{
+            display: none;
+          }
+          @include tablet{
+            display: block;
+          }
+    }
+    .wavy-heading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .wavy-heading {
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-underline-offset: 15px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: maroon;
+        text-align: center;
+        font-family: "Merienda", cursive;
+      }
+  
+   
+ 
+    .frame{
+        width: 60%;
+        display: flex;
+        height: max-content;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: rgba(#ffffff , 1);
+        text-align: center;
+        padding: 30px;
+     
+        @include mobile_S{
+            flex-direction: column;
+         }
+         
+         @include tablet{
+          flex-direction: row;
+          gap: 30px;
+       }
+     
+    
+    .div1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        
+
+        .form1{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+
+            Button {
+                background-color: floralwhite;
+                font-family: "Mooli", sans-serif;
+                color: #034070; /* Initial text color */
+                position: relative;
+                overflow: hidden; /* Ensure no overflow issues */
+                border: none; /* Remove any default border */
+                padding: 8px 20px; /* Add padding for better appearance */
+                cursor: pointer; /* Add pointer cursor for button */
+                text-align: center; /* Center align text */
+                z-index: 1; /* Ensure button text is on top */
+            
+                /* Add a diagonal background transition */
+                &::before {
+                    content: ''; 
+                    position: absolute;
+                    top: -100%; 
+                    left: -100%; 
+                    width: 300%; 
+                    height: 300%; 
+                    background-color: #034070; /* Background color */
+                    color: floralwhite; /* Text color */
+                    display: flex; /* Use flexbox for centering */
+                    align-items: center; /* Center vertically */
+                    justify-content: center; /* Center horizontally */
+                    transform: translateX(-100%) translateY(-100%); 
+                    transition: transform 0.5s ease; 
+                    z-index: 0; /* Ensure the pseudo-element is behind the button text */
+                    font-size: 16px; /* Adjust font size as needed */
+                    white-space: nowrap; /* Prevent text from wrapping */
+                }
+                
+                &:hover::before {
+                    transform: translateX(0) translateY(0); /* Slide in from the top-left corner on hover */
+                }
+            
+                /* Ensure the button text is visible above the pseudo-element */
+                span {
+                    position: relative;
+                    z-index: 1; /* Ensure text is above the pseudo-element */
+                    transition: color 0.5s ease; /* Smooth color transition */
+                }
+            
+                &:hover span {
+                    color: floralwhite; /* Change text color on hover */
+                }
+            }
+    
+            p{
+                font-size: 13px;
+                color: midnightblue;
+                cursor: pointer;
+            }
+        }
+    }
+    .div2{
+        width: 100%;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        Button {
+            background-color: floralwhite;
+            font-family: "Mooli", sans-serif;
+            color: #034070; /* Initial text color */
+            position: relative;
+            overflow: hidden; /* Ensure no overflow issues */
+            border: none; /* Remove any default border */
+            padding: 8px 20px; /* Add padding for better appearance */
+            cursor: pointer; /* Add pointer cursor for button */
+            text-align: center; /* Center align text */
+            z-index: 1; /* Ensure button text is on top */
+        
+            /* Add a diagonal background transition */
+            &::before {
+                content: ''; 
+                position: absolute;
+                top: -100%; 
+                left: -100%; 
+                width: 300%; 
+                height: 300%; 
+                background-color: #034070; /* Background color */
+                color: floralwhite; /* Text color */
+                display: flex; /* Use flexbox for centering */
+                align-items: center; /* Center vertically */
+                justify-content: center; /* Center horizontally */
+                transform: translateX(-100%) translateY(-100%); 
+                transition: transform 0.5s ease; 
+                z-index: 0; /* Ensure the pseudo-element is behind the button text */
+                font-size: 16px; /* Adjust font size as needed */
+                white-space: nowrap; /* Prevent text from wrapping */
+            }
+            
+            &:hover::before {
+                transform: translateX(0) translateY(0); /* Slide in from the top-left corner on hover */
+            }
+        
+            /* Ensure the button text is visible above the pseudo-element */
+            span {
+                position: relative;
+                z-index: 1; /* Ensure text is above the pseudo-element */
+                transition: color 0.5s ease; /* Smooth color transition */
+            }
+        
+            &:hover span {
+                color: floralwhite; /* Change text color on hover */
+            }
+        }
+
+}
+    }
+}

@@ -1,0 +1,82 @@
+@import "../../MediaQuery/Mixin.scss";
+
+.soul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background:linear-gradient(150deg,floralwhite,lightblue, floralwhite);
+  padding: 20px;
+  text-align: center;
+  .wavy-heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .wavy-heading {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 15px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: maroon;
+    text-align: center;
+    font-family: "Merienda", cursive;
+    color: #034070;
+  }
+
+  .soul-content {
+    max-width: 800px;
+    margin-bottom: 2rem;
+
+    p {
+      color: black;
+      line-height: 1.8;
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      transition: color 0.3s ease-in-out;
+      font-family: "Mooli", sans-serif; 
+line-height: 25px;
+    }
+  }
+
+  .soul-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .soul {
+    padding: 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .soul-content p {
+      font-size: 1rem;
+    }
+
+    .soul-images {
+      gap: 1rem;
+    }
+  }
+}

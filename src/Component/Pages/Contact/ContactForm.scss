@@ -1,0 +1,137 @@
+@import "../../MediaQuery/Mixin.scss";
+
+.contact-main{
+    width: 100%;
+    height: auto;
+    background:linear-gradient(150deg,floralwhite,lightblue, floralwhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0px;
+    font-family: "Mooli", sans-serif; 
+    line-height: 25px;
+
+    .wavy-heading-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    
+    .wavy-heading {
+    
+     
+      text-decoration-line: underline;
+      text-decoration-style: dashed;
+      text-underline-offset: 15px;
+      text-decoration-thickness: 2px;
+      text-decoration-color: maroon;
+      text-align: center;
+      font-family: "Merienda", cursive;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        font-family: "Mooli", sans-serif; 
+    }
+    p{
+      padding: 0px 10px;
+    }
+   b{
+    color: purple;
+    &:hover{
+        text-decoration: underline;
+        font-family: "Mooli", sans-serif; 
+    }
+   }
+  
+    
+  
+    .form{
+        width: 50%;
+        height: max-content;
+        background-color: rgba( white,  0.9);
+        font-family: "Mooli", sans-serif; 
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: rgba(103, 1, 6, 0.219) 0px 25px 25px -20px,
+        rgba(134, 5, 1, 0.347) 0px 25px 25px -20px;
+
+
+        @include mobile_S{
+            width: 70%;
+          }
+          @include mobile_M{
+            width: 80%;
+          }
+          @include mobile_L{
+            width: 80%;
+          }
+          @include tablet{
+            width: 70%;
+          }
+          @include tablet_L{
+            width: 60%;
+          }
+          @include laptop{
+            width: 50%;
+          }
+        ::placeholder{
+          font-family: "Mooli", sans-serif; 
+        }
+
+        Button {
+          background-color: floralwhite;
+          font-family: "Mooli", sans-serif; 
+          color: #034070; /* Initial text color */
+          position: relative;
+          overflow: hidden; /* Ensure no overflow issues */
+          border: none; /* Remove any default border */
+          padding: 8px 20px; /* Add padding for better appearance */
+          cursor: pointer; /* Add pointer cursor for button */
+          text-align: center; /* Center align text */
+          z-index: 1; /* Ensure button text is on top */
+      
+          /* Add a diagonal background transition */
+          &::before {
+              content: ''; 
+              position: absolute;
+              top: -100%; 
+              left: -100%; 
+              width: 300%; 
+              height: 300%; 
+              background-color: #034070; /* Background color */
+              color: floralwhite; /* Text color */
+              display: flex; /* Use flexbox for centering */
+              align-items: center; /* Center vertically */
+              justify-content: center; /* Center horizontally */
+              transform: translateX(-100%) translateY(-100%); 
+              transition: transform 0.5s ease; 
+              z-index: 0; /* Ensure the pseudo-element is behind the button text */
+              font-size: 16px; /* Adjust font size as needed */
+              white-space: nowrap; /* Prevent text from wrapping */
+          }
+          
+          &:hover::before {
+              transform: translateX(0) translateY(0); /* Slide in from the top-left corner on hover */
+          }
+      
+          /* Ensure the button text is visible above the pseudo-element */
+          span {
+              position: relative;
+              z-index: 1; /* Ensure text is above the pseudo-element */
+              transition: color 0.5s ease; /* Smooth color transition */
+          }
+      
+          &:hover span {
+              color: floralwhite; /* Change text color on hover */
+          }
+      }
+        
+    }
+}
