@@ -7,7 +7,6 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import MailIcon from '@mui/icons-material/Mail';
 import MessageIcon from '@mui/icons-material/Message';
-import { Link } from 'react-router-dom';
 import MyContext from '../../Context/MyContext';
 
 
@@ -85,8 +84,8 @@ const ContactForm = () => {
       </div>
 <p>Hours of Operation: <b>Monday - Saturday 9 AM - 5 PM IST</b></p>
 <p>Toll-Free within India: +1800-867-5627</p>
-<p>Mobile No. : 9754850400</p>
-<p>Email Id : <Link>aseemjoshi75@gmail.com</Link></p>
+<p>Contact : <a href='tel:9754850400'><b>9754850400</b></a></p>
+<p>Email Id : <a href="mailto:solemates@gmail.com?subject=Subject%20Here&body=Body%20Here"><b>solemates@gmail.com</b></a></p>
 <p>Type questions or feedback below and a Customer Service Specialist will reply within 24 business hours.</p>
 <form className='form' onSubmit={formik.handleSubmit}>
 <Box  sx={{ display: 'flex',justifyContent: 'center', alignItems: 'center'}}>
