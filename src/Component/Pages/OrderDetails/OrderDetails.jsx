@@ -57,7 +57,7 @@ const OrderDetails = () => {
                 <h3>{item.name}</h3>
                 <p>Price: ${item.price}</p>
                 <p>Quantity: {item.quantity}</p>
-                <p>Quantity: {item.size}</p>
+                <p>Size: {item.size}</p>
                 <p>Order ID: {item._id.slice(-4)}</p>
                 <p>Order Date: {item.orderDate.slice(0,10)}</p>
               </div>
