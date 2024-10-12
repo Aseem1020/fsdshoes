@@ -55,7 +55,7 @@ const OrderDetails = () => {
               <img src={item.img} alt={item.name} className="order-item-img" />
               <div className="order-item-details">
                 <h3>{item.name}</h3>
-                <p>Price: ${item.price}</p>
+                <p>Price: &#8377;{item.price}</p>
                 <p>Quantity: {item.quantity}</p>
                 <p>Size: {item.size}</p>
                 <p>Order ID: {item._id.slice(-4)}</p>
