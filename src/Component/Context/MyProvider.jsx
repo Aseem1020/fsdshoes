@@ -360,7 +360,7 @@ const [isOpen5, setIsOpen5] = React.useState(false)
 
 
 return (
-<MyContext.Provider value={{isOpen5, setIsOpen5,handleDecreaseQuantity,handleIncreaseQuantity,orderadmin,setOrderadmin,isOpen,handleOrder, setIsOpen,isOpen2, setIsOpen2,handleremove,handleWish,wish,setWish,handledelete,cart,setCart,handleCart,input,setInput,form,setForm,handlelogout,message,token,setToken,setMessage,alert,setAlert,num,loader,setLoader,cinfo, setCinfo ,register,setRegister,order, setOrder ,}} >
+<MyContext.Provider value={{isOpen5, setIsOpen5,handleDecreaseQuantity,handleIncreaseQuantity,orderadmin,setOrderadmin,isOpen,handleOrder, setIsOpen,isOpen2, setIsOpen2,handleremove,handleWish,wish,setWish,handledelete,cart,setCart,handleCart,input,setInput,form,setForm,handlelogout,message,token,setToken,setMessage,alert,setAlert,num,loader,setLoader,cinfo, setCinfo ,register,setRegister,order, setOrder}} >
 {children}
 </MyContext.Provider>
 )
